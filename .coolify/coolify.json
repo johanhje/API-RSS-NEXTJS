@@ -13,8 +13,5 @@
     "NODE_ENV": "production",
     "PORT": "8888",
     "HOSTNAME": "0.0.0.0"
-  },
-  "buildPack": "dockerfile",
-  "dockerfilePath": "Dockerfile",
-  "buildCommand": null
+  }
 } 
