@@ -13,9 +13,18 @@ import { getCacheMetrics } from './lib/cache/index.js';
 import { initializeServices } from './lib/startup.js';
 import { getDatabase } from './lib/db/database.js';
 
-// Konstanter
+// Konstanterna
 const PORT = process.env.PORT || process.env.API_PORT || 8888;
 const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
+const BASE_PATH = process.env.BASE_PATH || '';
+
+// Detaljerad uppstartsloggning
+console.log('=========================================');
+console.log(`STARTING SERVER ON ${HOSTNAME}:${PORT}`);
+console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+console.log(`Base path: "${BASE_PATH}"`);
+console.log(`Working directory: ${process.cwd()}`);
+console.log('=========================================');
 
 // Förhindra att servern kraschar på oväntade fel
 process.on('uncaughtException', (err) => {
@@ -299,29 +308,79 @@ function sendJsonResponse(res, statusCode, data) {
   }
 }
 
+/**
+ * Sätt standardheaders för CORS och caching
+ * @param {http.ServerResponse} res - HTTP-response
+ */
+function setDefaultHeaders(res) {
+  // CORS-headers
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-Type, Date, X-Api-Version');
+  
+  // Caching-headers
+  res.setHeader('Cache-Control', 'no-store');
+  res.setHeader('Pragma', 'no-cache');
+}
+
 // Skapa HTTP-server
 const server = createServer((req, res) => {
+  // Sätt standard-headers för CORS och caching
+  setDefaultHeaders(res);
+
+  // Hantera OPTIONS-förfrågan
+  if (req.method === 'OPTIONS') {
+    res.statusCode = 204;
+    res.end();
+    return;
+  }
+
+  // Parsera URL:en
+  const parsedUrl = parse(req.url || '/', true);
+  
+  // Ta bort BASE_PATH från pathname om det behövs 
+  let pathname = parsedUrl.pathname || '/';
+  if (BASE_PATH && pathname.startsWith(BASE_PATH)) {
+    pathname = pathname.substring(BASE_PATH.length);
+  }
+  
+  // Se till att pathname börjar med '/'
+  if (!pathname.startsWith('/')) {
+    pathname = '/' + pathname;
+  }
+
+  console.log(`${req.method} ${pathname} (original: ${parsedUrl.pathname})`);
+
+  // Matcha endpoint eller skicka 404
   try {
-    // Hantera OPTIONS-request för CORS
-    if (req.method === 'OPTIONS') {
-      sendJsonResponse(res, 200, {});
-      return;
+    // Kontrollera om vi har en handler för denna pathname
+    const handler = handlers[pathname];
+    if (handler) {
+      handler(req, res, parsedUrl.query);
+    } else {
+      // Kolla om vi har en handler för denna pathname utan trailing slash
+      const pathnameNoSlash = pathname.endsWith('/') ? pathname.slice(0, -1) : pathname + '/';
+      const handlerNoSlash = handlers[pathnameNoSlash];
+
+      if (handlerNoSlash) {
+        handlerNoSlash(req, res, parsedUrl.query);
+      } else {
+        // Skicka 404 Not Found
+        res.statusCode = 404;
+        sendJsonResponse(res, 404, {
+          error: 'Not Found',
+          message: `Endpoint ${pathname} not found`,
+          endpoints: Object.keys(handlers)
+        });
+      }
     }
-    
-    // Parsa URL
-    const parsedUrl = parse(req.url, true);
-    const path = parsedUrl.pathname;
-    
-    // Invoke handler
-    console.log(`${req.method} ${path}`);
-    const handler = handlers[path] || handlers['default'];
-    handler(req, res);
-  } catch (err) {
-    console.error('Server error:', err);
+  } catch (error) {
+    console.error(`Error processing request for ${pathname}:`, error);
+    res.statusCode = 500;
     sendJsonResponse(res, 500, {
-      status: 'error',
-      error: 'Internal server error',
-      message: err.message
+      error: 'Internal Server Error',
+      message: 'An unexpected error occurred while processing your request'
     });
   }
 });
