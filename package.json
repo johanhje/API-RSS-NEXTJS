@@ -5,9 +5,10 @@
   "main": "api/simple-server.js",
   "private": true,
   "scripts": {
-    "start": "cd api && node simple-server.js",
+    "start": "cd api && PORT=80 HOSTNAME=0.0.0.0 NODE_ENV=production node simple-server.js",
     "build": "cd api && npm run build",
-    "install": "cd api && npm install"
+    "install": "cd api && npm install",
+    "dev": "cd api && npm run dev:custom"
   },
   "engines": {
     "node": ">=18.0.0"

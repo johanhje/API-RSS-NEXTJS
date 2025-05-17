@@ -14,8 +14,8 @@ import { initializeServices } from './lib/startup.js';
 import { getDatabase } from './lib/db/database.js';
 
 // Konstanter
-const PORT = process.env.API_PORT || 8888;
-const HOSTNAME = 'localhost';
+const PORT = process.env.PORT || process.env.API_PORT || 8888;
+const HOSTNAME = process.env.HOSTNAME || '0.0.0.0';
 
 // Förhindra att servern kraschar på oväntade fel
 process.on('uncaughtException', (err) => {
@@ -28,23 +28,18 @@ process.on('unhandledRejection', (reason, promise) => {
 });
 
 // Hämta package.json info
-try {
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  const pkgPath = path.join(__dirname, 'package.json');
-  var pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
-} catch (err) {
-  console.error('Kunde inte läsa package.json, använder standardvärden:', err);
-  var pkg = { name: 'api', version: '0.1.0', description: 'RSS API' };
-}
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const pkgPath = path.join(__dirname, 'package.json');
+const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
 
 // Initialisera API-tjänster
-console.log('Initialiserar API-tjänster...');
+console.log(`Initialiserar API-tjänster på ${HOSTNAME}:${PORT}...`);
 try {
   initializeServices();
   console.log('API-tjänster initialiserade');
-} catch (err) {
-  console.error('Fel vid initialisering av tjänster:', err);
+} catch (error) {
+  console.error('Fel vid initialisering av tjänster:', error);
 }
 
 // Endpoint handlers

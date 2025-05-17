@@ -83,13 +83,38 @@ curl http://localhost:3000/api/v1/types
 
 ## Docker Deployment
 
+### Standard Docker
+
 ```bash
 # Build the Docker image
-docker build -t police-events-api ./api
+docker build -t police-events-api .
 
 # Run the container
-docker run -p 3000:3000 -d police-events-api
+docker run -p 80:80 -d police-events-api
 ```
+
+### Using Docker Compose
+
+```bash
+# Build and start the container
+docker-compose up -d
+```
+
+### Deployment with Coolify
+
+This project is configured for easy deployment with Coolify:
+
+1. Connect your GitHub repository to Coolify
+2. Create a new service with the following settings:
+   - **Build Method**: Dockerfile (auto-detected)
+   - **Docker Compose**: Yes, use the included docker-compose.yml
+   - **Port**: 80
+   - **Environment Variables**: No additional variables required
+
+Coolify will automatically:
+- Build the Docker image
+- Start the container
+- Expose the API at your configured domain
 
 ## Project Structure
 
@@ -103,6 +128,8 @@ API-RSS-NEXTJS/
 │   ├── public/           # Static assets
 │   ├── scripts/          # Utility scripts
 │   └── tests/            # Test files
+├── docker-compose.yml    # Docker Compose configuration
+├── Dockerfile            # Docker build instructions
 ├── LICENSE               # License file
 └── README.md             # This file
 ```
@@ -123,7 +150,7 @@ For complete API documentation, see the [API Documentation](api/docs/api/README.
 
 ## Monitoring
 
-Access the monitoring dashboard at [http://localhost:3000/geocoding-dashboard](http://localhost:3000/geocoding-dashboard)
+Access the monitoring dashboard at [http://your-domain/geocoding-dashboard](http://your-domain/geocoding-dashboard)
 
 ## Performance
 

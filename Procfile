@@ -1,1 +1,1 @@
-web: cd api && npm start || node simple-server.js 
+web: cd api && PORT=80 HOSTNAME=0.0.0.0 NODE_ENV=production node simple-server.js 
