@@ -1,0 +1,8 @@
+
+# Node modules
+node_modules
+*/node_modules
+
+# Exclude embedded repos and archives
+polisapi/
+polisapi.zip

@@ -1,0 +1,38 @@
+# Task ID: 2
+# Title: Set Up Next.js Project Structure
+# Status: pending
+# Dependencies: 1
+# Priority: high
+# Description: Initialize a new Next.js project with the required dependencies and folder structure.
+# Details:
+1. Create a new Next.js project at /Users/johan/Desktop/API-RSS-NEXTJS/api
+2. Install required dependencies:
+   - better-sqlite3 for database integration
+   - rss-parser for RSS feed parsing
+   - axios for HTTP requests
+   - other utilities as needed
+3. Set up folder structure:
+   ```
+   /api
+     /pages
+       /api
+         /v1  # API routes matching existing Python API
+     /lib
+       /db  # Database utilities
+       /geocoding  # Geocoding services
+       /rss  # RSS parsing utilities
+     /models  # Data models
+     /config  # Configuration files
+     /utils  # Utility functions
+     /public
+   ```
+4. Configure environment variables for development and production
+5. Set up ESLint and Prettier for code quality
+6. Initialize Git repository with appropriate .gitignore
+
+# Test Strategy:
+Verify project setup by:
+- Confirming all dependencies install correctly
+- Testing basic Next.js functionality
+- Ensuring development server starts without errors
+- Validating environment configuration works in different environments

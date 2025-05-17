@@ -1,0 +1,48 @@
+# Task ID: 5
+# Title: Implement RSS Feed Parser
+# Status: pending
+# Dependencies: 2
+# Priority: high
+# Description: Create a service to fetch and parse the Swedish Police RSS feed, extracting event information and location data.
+# Details:
+1. Use rss-parser to fetch and parse the RSS feed:
+   ```javascript
+   // lib/rss/parser.js
+   const Parser = require('rss-parser');
+   const parser = new Parser();
+   
+   async function fetchPoliceEvents() {
+     try {
+       const feed = await parser.parseURL('https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/');
+       return feed.items.map(item => ({
+         title: item.title,
+         description: item.content,
+         link: item.link,
+         pubDate: new Date(item.pubDate),
+         guid: item.guid,
+         // Extract location from title
+         location: extractLocationFromTitle(item.title)
+       }));
+     } catch (error) {
+       console.error('Error fetching police events:', error);
+       throw error;
+     }
+   }
+   
+   function extractLocationFromTitle(title) {
+     // Implement logic to extract location from title
+     // Example: "Inbrott, Stockholm" -> "Stockholm"
+     // Handle complex cases and special formats
+   }
+   ```
+2. Implement location extraction from event titles
+3. Create a caching mechanism to reduce API calls
+4. Handle RSS feed structure changes gracefully
+5. Implement error handling and retry logic
+
+# Test Strategy:
+1. Test parsing with sample RSS feed data
+2. Verify location extraction with various title formats
+3. Test caching mechanism effectiveness
+4. Validate error handling with simulated network failures
+5. Test with malformed RSS data to ensure robustness

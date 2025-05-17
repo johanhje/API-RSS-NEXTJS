@@ -1,0 +1,40 @@
+# Task ID: 4
+# Title: Create Swedish Location Database
+# Status: pending
+# Dependencies: 3
+# Priority: high
+# Description: Develop a comprehensive database of Swedish locations including cities, municipalities, counties, and tourist destinations with their coordinates.
+# Details:
+1. Create a JSON structure for storing location data:
+   ```javascript
+   {
+     "locations": [
+       {
+         "name": "Stockholm",
+         "type": "city",
+         "county": "Stockholm",
+         "latitude": 59.3293,
+         "longitude": 18.0686,
+         "aliases": ["Stockholms stad", "Stockholms kommun"]
+       },
+       // More locations...
+     ]
+   }
+   ```
+2. Compile a list of 900+ Swedish locations including:
+   - All major cities
+   - All municipalities
+   - All counties
+   - Popular tourist destinations
+   - Special focus on Kronoberg county locations
+3. Include normalized versions of location names to handle variations
+4. Add police-specific location formats and abbreviations
+5. Implement a utility to load and search this database efficiently
+6. Create a mechanism to update the location database over time
+
+# Test Strategy:
+1. Verify all major Swedish cities are included
+2. Test location lookup with various formats and spellings
+3. Validate coordinates against known correct values
+4. Test special case handling for Kronoberg county locations
+5. Benchmark search performance with large datasets

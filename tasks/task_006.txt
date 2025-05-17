@@ -1,0 +1,51 @@
+# Task ID: 6
+# Title: Develop Geocoding Service
+# Status: pending
+# Dependencies: 4, 5
+# Priority: high
+# Description: Create a geocoding service that maps location names to coordinates using the Swedish location database and Nominatim as a fallback.
+# Details:
+1. Implement a multi-tier geocoding approach:
+   ```javascript
+   // lib/geocoding/index.js
+   const { searchLocationDatabase } = require('./locationDatabase');
+   const { geocodeWithNominatim } = require('./nominatim');
+   
+   async function geocodeLocation(locationString) {
+     // Step 1: Clean and normalize the location string
+     const normalizedLocation = normalizeLocationString(locationString);
+     
+     // Step 2: Try to find in our custom location database
+     const localResult = searchLocationDatabase(normalizedLocation);
+     if (localResult) return localResult;
+     
+     // Step 3: Try variations and partial matches
+     const fuzzyResult = fuzzySearchLocationDatabase(normalizedLocation);
+     if (fuzzyResult) return fuzzyResult;
+     
+     // Step 4: Fall back to Nominatim for unknown locations
+     try {
+       return await geocodeWithNominatim(normalizedLocation, 'Sweden');
+     } catch (error) {
+       console.error(`Failed to geocode location: ${locationString}`, error);
+       return null;
+     }
+   }
+   ```
+2. Implement location name normalization to handle:
+   - Case sensitivity
+   - Hyphens and special characters
+   - Common abbreviations
+   - Municipality suffixes (kommun, stad, etc.)
+3. Create fallback mechanisms for complex location strings
+4. Implement rate limiting for Nominatim API calls
+5. Add caching for geocoding results
+6. Track problematic locations that fail to geocode
+
+# Test Strategy:
+1. Test geocoding with various location formats
+2. Verify normalization handles special cases correctly
+3. Test fallback to Nominatim when needed
+4. Validate coordinates against known correct values
+5. Test rate limiting and caching mechanisms
+6. Benchmark geocoding performance

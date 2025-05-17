@@ -1,0 +1,55 @@
+# Task ID: 13
+# Title: Optimize Geocoding Performance
+# Status: done
+# Dependencies: 6, 10
+# Priority: medium
+# Description: Optimize the geocoding system for speed and accuracy, minimizing external API calls.
+# Details:
+1. Implement performance optimizations for geocoding:
+   - Use indexed location lookups
+   - Implement prefix-based search
+   - Add fuzzy matching with configurable thresholds
+   - Batch geocoding requests where possible
+2. Optimize the location database structure for fast lookups:
+   ```javascript
+   // Example optimized structure
+   const locationIndex = {
+     byName: new Map(), // name -> location
+     byPrefix: {}, // prefix -> locations
+     byCounty: {} // county -> locations
+   };
+   
+   function buildLocationIndex(locations) {
+     locations.forEach(location => {
+       // Index by exact name
+       locationIndex.byName.set(location.name.toLowerCase(), location);
+       
+       // Index by aliases
+       location.aliases?.forEach(alias => {
+         locationIndex.byName.set(alias.toLowerCase(), location);
+       });
+       
+       // Index by prefix (first 3 chars)
+       const prefix = location.name.toLowerCase().substring(0, 3);
+       locationIndex.byPrefix[prefix] = locationIndex.byPrefix[prefix] || [];
+       locationIndex.byPrefix[prefix].push(location);
+       
+       // Index by county
+       if (location.county) {
+         locationIndex.byCounty[location.county] = locationIndex.byCounty[location.county] || [];
+         locationIndex.byCounty[location.county].push(location);
+       }
+     });
+   }
+   ```
+3. Implement caching for geocoding results
+4. Add parallel processing for batch geocoding
+5. Optimize Nominatim API calls with proper parameters
+6. Implement progressive geocoding (try fast methods first, then fall back to slower but more accurate methods)
+
+# Test Strategy:
+1. Benchmark geocoding performance with various location formats
+2. Test optimization effectiveness with large datasets
+3. Verify accuracy is maintained with optimizations
+4. Test caching effectiveness
+5. Validate parallel processing works correctly

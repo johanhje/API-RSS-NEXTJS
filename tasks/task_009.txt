@@ -1,0 +1,43 @@
+# Task ID: 9
+# Title: Implement Regular Polling Mechanism
+# Status: done
+# Dependencies: 7
+# Priority: medium
+# Description: Create a service to regularly poll the RSS feed, process new events, and update the database.
+# Details:
+1. Implement a polling mechanism using Next.js API routes:
+   ```javascript
+   // pages/api/cron/update-events.js
+   import { processPoliceEvents } from '../../../lib/events/processor';
+   
+   export default async function handler(req, res) {
+     // Verify request is authorized (e.g., from a cron job)
+     if (req.headers.authorization !== `Bearer ${process.env.CRON_SECRET}`) {
+       return res.status(401).json({ success: false, error: 'Unauthorized' });
+     }
+     
+     try {
+       const result = await processPoliceEvents();
+       res.status(200).json({
+         success: true,
+         processed: result.filter(r => r.status === 'processed').length,
+         skipped: result.filter(r => r.status === 'skipped').length
+       });
+     } catch (error) {
+       console.error('Update events error:', error);
+       res.status(500).json({ success: false, error: 'Internal server error' });
+     }
+   }
+   ```
+2. Set up a cron job or scheduled task to call this endpoint regularly
+3. Implement locking to prevent concurrent updates
+4. Add error handling and retry logic
+5. Implement logging for monitoring
+6. Create a mechanism to handle backfilling of missing events
+
+# Test Strategy:
+1. Test polling mechanism with sample RSS data
+2. Verify locking prevents concurrent updates
+3. Test error handling and retry logic
+4. Validate logging and monitoring
+5. Test backfilling of missing events

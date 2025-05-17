@@ -1,0 +1,112 @@
+# Product Requirements Document: Swedish Police RSS Feed Geocoding System
+
+## Overview
+Create a Next.js API that fetches police events from an RSS feed and makes them available to clients, particularly an iOS app. The system should accurately geocode Swedish locations from police reports to allow them to be displayed on maps.
+
+## Core Requirements
+
+1. **RSS Feed Integration**
+   - Fetch and parse the Swedish Police RSS feed
+   - Extract event information including title, description, link, and publication date
+   - Extract location information from event titles
+   - Implement caching to reduce API calls
+
+2. **Geocoding System**
+   - Create a comprehensive database of Swedish locations (900+ locations)
+   - Include all major Swedish cities, municipalities, counties, and tourist destinations
+   - Add specialized coverage for Kronoberg county locations
+   - Support police-specific location formats
+   - Implement location name normalization to handle case sensitivity, hyphens, and special characters
+   - Create fallback mechanisms for complex location strings
+
+3. **API Endpoints**
+   - Create RESTful endpoints for accessing police events
+   - Include location coordinates in the API response
+   - Support filtering and pagination
+   - Implement error handling and proper status codes
+
+4. **Monitoring and Maintenance**
+   - Create a dashboard for monitoring geocoding success rates
+   - Implement automatic location database updates
+   - Track problematic locations that fail to geocode
+   - Create comprehensive testing infrastructure
+
+5. **Database Integration**
+   - Store events in SQLite database
+   - Ensure proper schema compatibility between RSS feed data and database
+   - Implement efficient sync mechanism
+
+6. **Performance Optimization**
+   - Optimize geocoding for speed
+   - Minimize API calls to external geocoding services
+   - Implement effective caching strategies
+
+7. **Documentation**
+   - Create comprehensive documentation for the geocoding system
+   - Document API endpoints and usage
+   - Provide maintenance instructions
+
+## Technical Specifications
+
+- Framework: Next.js
+- Language: JavaScript/Node.js
+- Database: SQLite (better-sqlite3)
+- RSS Parser: rss-parser
+- Geocoding: Custom implementation with Nominatim fallback
+- Location Database: Custom JSON with 900+ Swedish locations
+
+## Development Roadmap
+1. **Analysis Phase**
+   - Analyze existing Python API structure and endpoints
+   - Analyze SQLite database schema
+   - Map RSS feed structure to existing data model
+
+2. **Core Implementation**
+   - Set up Next.js project structure
+   - Implement RSS feed parser
+   - Implement Nominatim geocoding service
+   - Implement SQLite connector and data migration
+
+3. **API Development**
+   - Implement API routes matching the existing Python API
+   - Ensure response formats match exactly
+   - Implement filtering and search capabilities
+
+4. **Testing & Validation**
+   - Test against existing API responses
+   - Validate output format compatibility with iOS app
+   - Test data migration and event matching logic
+
+## Logical Dependency Chain
+1. Analyze existing Python codebase to understand API structure and endpoints
+2. Set up Next.js project with basic structure
+3. Implement SQLite integration and migrate existing database
+4. Implement RSS feed parser
+5. Implement geocoding service
+6. Implement event matching logic
+7. Build API endpoints replicating existing functionality
+8. Implement regular polling/update mechanism
+9. Comprehensive testing against existing API responses
+
+## Risks and Mitigations
+1. **Incompatibility with iOS App**
+   - Risk: Any changes to API output could break the iOS app
+   - Mitigation: Rigorous testing of output format compatibility, direct comparison with existing API responses
+
+2. **RSS Feed Structure Changes**
+   - Risk: Police may change their RSS feed structure
+   - Mitigation: Build flexible parser with error handling, implement monitoring for feed changes
+
+3. **Geocoding Accuracy**
+   - Risk: Locations in RSS feed may not map accurately to geocoordinates
+   - Mitigation: Implement fallback mechanisms, fuzzy matching, and manual correction capabilities
+
+4. **Performance Issues**
+   - Risk: RSS polling and geocoding may introduce performance bottlenecks
+   - Mitigation: Implement caching, rate-limiting, and asynchronous processing
+
+## Appendix
+- Current API Location: /Users/johan/Desktop/API-RSS-NEXTJS/polisapi
+- Target API Location: /Users/johan/Desktop/API-RSS-NEXTJS/api
+- RSS Feed URL: https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/
+- Geocoding Service: OpenStreetMap Nominatim (no API key required) 

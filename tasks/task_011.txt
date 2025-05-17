@@ -1,0 +1,48 @@
+# Task ID: 11
+# Title: Create Monitoring Dashboard
+# Status: done
+# Dependencies: 6, 7, 9
+# Priority: low
+# Description: Develop a dashboard for monitoring geocoding success rates and system performance.
+# Details:
+1. Create a monitoring dashboard API endpoint:
+   ```javascript
+   // pages/api/v1/dashboard.js
+   export default async function handler(req, res) {
+     try {
+       // Get system statistics
+       const stats = {
+         events: {
+           total: getTotalEventCount(),
+           geocoded: getGeocodedEventCount(),
+           failed: getFailedGeocodingCount()
+         },
+         locations: {
+           total: getTotalLocationsCount(),
+           problematic: getProblematicLocationsCount()
+         },
+         performance: {
+           averageProcessingTime: getAverageProcessingTime(),
+           cacheHitRate: getCacheHitRate()
+         },
+         lastUpdate: getLastUpdateTime()
+       };
+       
+       res.status(200).json({ success: true, data: stats });
+     } catch (error) {
+       console.error('Dashboard error:', error);
+       res.status(500).json({ success: false, error: 'Internal server error' });
+     }
+   }
+   ```
+2. Create a simple frontend dashboard using Next.js pages
+3. Implement charts and visualizations for key metrics
+4. Add alerts for critical issues
+5. Create a view for problematic locations that fail to geocode
+
+# Test Strategy:
+1. Test dashboard API with sample data
+2. Verify metrics calculations are accurate
+3. Test frontend rendering with various data scenarios
+4. Validate alerts trigger correctly
+5. Test problematic locations view

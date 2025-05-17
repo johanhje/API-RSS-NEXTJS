@@ -1,0 +1,647 @@
+Building location index with prefix length 3...
+Location index built: 1092 named entries, 520 prefixes, 87 counties
+Initialiserar API-tjänster...
+Initializing API services...
+Starting RSS scheduler with 60 second interval
+Starting RSS sync scheduler, interval: 60 seconds
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+Fetching RSS feed from: https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/
+API services initialized
+API-tjänster initialiserade
+Server fully initialized and ready for requests.
+API-server igång på http://localhost:8888
+Successfully fetched 200 items from RSS feed
+Cache SET: rss:https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/ (expires in 900s), cache size: 1
+Converting 200 RSS items to events...
+[Geocoder] Geocoding "Skadegörelse, Sundsvall" → "skadegörelse, sundsvall"
+[Geocoder] Found "skadegörelse, sundsvall" in location index
+Cache SET: geocoding:skadegörelse, sundsvall (expires in 2592000s), cache size: 2
+Cache SET: geocoding:normalized:trafikolycka, personskada, alingsås (expires in 7776000s), cache size: 3
+[Geocoder] Geocoding "Trafikolycka, personskada, Alingsås" → "personskada, alingsås"
+[Geocoder] Found "personskada, alingsås" in location index
+Cache SET: geocoding:trafikolycka, personskada, alingsås (expires in 2592000s), cache size: 4
+Cache SET: geocoding:normalized:trafikolycka, huddinge (expires in 7776000s), cache size: 5
+[Geocoder] Geocoding "Trafikolycka, Huddinge" → "huddinge"
+[Geocoder] Found "huddinge" in location index
+Cache SET: geocoding:trafikolycka, huddinge (expires in 2592000s), cache size: 6
+Cache SET: geocoding:normalized:trafikolycka, personskada, varberg (expires in 7776000s), cache size: 7
+[Geocoder] Geocoding "Trafikolycka, personskada, Varberg" → "personskada, varberg"
+[Geocoder] Found "personskada, varberg" in location index
+Cache SET: geocoding:trafikolycka, personskada, varberg (expires in 2592000s), cache size: 8
+Cache SET: geocoding:normalized:trafikolycka, singel, falun (expires in 7776000s), cache size: 9
+[Geocoder] Geocoding "Trafikolycka, singel, Falun" → "singel, falun"
+[Geocoder] Found "singel, falun" in location index
+Cache SET: geocoding:trafikolycka, singel, falun (expires in 2592000s), cache size: 10
+[Geocoder] Geocoding "Trafikbrott, Falun" → "trafikbrott, falun"
+[Geocoder] Found "trafikbrott, falun" in location index
+Cache SET: geocoding:trafikbrott, falun (expires in 2592000s), cache size: 11
+Cache SET: geocoding:normalized:sammanfattning natt, värmlands län (expires in 7776000s), cache size: 12
+[Geocoder] Geocoding "Sammanfattning natt, Värmlands län" → "sammanfattning natt, värmlands"
+[Geocoder] Found "sammanfattning natt, värmlands" in location index
+Cache SET: geocoding:sammanfattning natt, värmlands län (expires in 2592000s), cache size: 13
+Cache SET: geocoding:normalized:sammanfattning natt, örebro län (expires in 7776000s), cache size: 14
+[Geocoder] Geocoding "Sammanfattning natt, Örebro län" → "sammanfattning natt, örebro"
+[Geocoder] Found "sammanfattning natt, örebro" in location index
+Cache SET: geocoding:sammanfattning natt, örebro län (expires in 2592000s), cache size: 15
+Cache SET: geocoding:normalized:sammanfattning natt, dalarnas län (expires in 7776000s), cache size: 16
+[Geocoder] Geocoding "Sammanfattning natt, Dalarnas län" → "sammanfattning natt, dalarnas"
+[Geocoder] Found "sammanfattning natt, dalarnas" in location index
+Cache SET: geocoding:sammanfattning natt, dalarnas län (expires in 2592000s), cache size: 17
+Cache SET: geocoding:normalized:sammanfattning natt, norrbottens län (expires in 7776000s), cache size: 18
+[Geocoder] Geocoding "Sammanfattning natt, Norrbottens län" → "sammanfattning natt, norrbottens"
+[Geocoder] Found "sammanfattning natt, norrbottens" in location index
+Cache SET: geocoding:sammanfattning natt, norrbottens län (expires in 2592000s), cache size: 19
+Cache SET: geocoding:normalized:sammanfattning natt, västerbottens län (expires in 7776000s), cache size: 20
+[Geocoder] Geocoding "Sammanfattning natt, Västerbottens län" → "sammanfattning natt, västerbottens"
+[Geocoder] Found "sammanfattning natt, västerbottens" in location index
+Cache SET: geocoding:sammanfattning natt, västerbottens län (expires in 2592000s), cache size: 21
+Cache SET: geocoding:normalized:sammanfattning natt, västernorrlands län (expires in 7776000s), cache size: 22
+[Geocoder] Geocoding "Sammanfattning natt, Västernorrlands län" → "sammanfattning natt, västernorrlands"
+[Geocoder] Found "sammanfattning natt, västernorrlands" in location index
+Cache SET: geocoding:sammanfattning natt, västernorrlands län (expires in 2592000s), cache size: 23
+Cache SET: geocoding:normalized:sammanfattning natt, jämtlands län (expires in 7776000s), cache size: 24
+[Geocoder] Geocoding "Sammanfattning natt, Jämtlands län" → "sammanfattning natt, jämtlands"
+[Geocoder] Found "sammanfattning natt, jämtlands" in location index
+Cache SET: geocoding:sammanfattning natt, jämtlands län (expires in 2592000s), cache size: 25
+Cache SET: geocoding:normalized:sammanfattning natt, jönköpings län (expires in 7776000s), cache size: 26
+[Geocoder] Geocoding "Sammanfattning natt, Jönköpings län" → "sammanfattning natt, jönköpings"
+[Geocoder] Found "sammanfattning natt, jönköpings" in location index
+Cache SET: geocoding:sammanfattning natt, jönköpings län (expires in 2592000s), cache size: 27
+Cache SET: geocoding:normalized:sammanfattning natt, östergötlands län (expires in 7776000s), cache size: 28
+[Geocoder] Geocoding "Sammanfattning natt, Östergötlands län" → "sammanfattning natt, östergötlands"
+[Geocoder] Found "sammanfattning natt, östergötlands" in location index
+Cache SET: geocoding:sammanfattning natt, östergötlands län (expires in 2592000s), cache size: 29
+Cache SET: geocoding:normalized:sammanfattning natt, södermanlands län (expires in 7776000s), cache size: 30
+[Geocoder] Geocoding "Sammanfattning natt, Södermanlands län" → "sammanfattning natt, södermanlands"
+[Geocoder] Found "sammanfattning natt, södermanlands" in location index
+Cache SET: geocoding:sammanfattning natt, södermanlands län (expires in 2592000s), cache size: 31
+Cache SET: geocoding:normalized:misshandel, stockholm (expires in 7776000s), cache size: 32
+[Geocoder] Geocoding "Misshandel, Stockholm" → "stockholm"
+[Geocoder] Found "stockholm" in location index
+Cache SET: geocoding:misshandel, stockholm (expires in 2592000s), cache size: 33
+Cache SET: geocoding:normalized:misshandel, uppsala (expires in 7776000s), cache size: 34
+[Geocoder] Geocoding "Misshandel, Uppsala" → "uppsala"
+[Geocoder] Found "uppsala" in location index
+Cache SET: geocoding:misshandel, uppsala (expires in 2592000s), cache size: 35
+[Geocoder] Geocoding "Trafikbrott, Uppsala" → "trafikbrott, uppsala"
+[Geocoder] Found "trafikbrott, uppsala" in location index
+Cache SET: geocoding:trafikbrott, uppsala (expires in 2592000s), cache size: 36
+[Geocoder] Geocoding "Stöld/inbrott, Uppsala" → "stöld/inbrott, uppsala"
+[Geocoder] Found "stöld/inbrott, uppsala" in location index
+Cache SET: geocoding:stöld/inbrott, uppsala (expires in 2592000s), cache size: 37
+Cache SET: geocoding:normalized:brand, åstorp (expires in 7776000s), cache size: 38
+[Geocoder] Geocoding "Brand, Åstorp" → "åstorp"
+[Geocoder] Found "åstorp" in location index
+Cache SET: geocoding:brand, åstorp (expires in 2592000s), cache size: 39
+Cache SET: geocoding:normalized:sammanfattning natt, västra götalands län (expires in 7776000s), cache size: 40
+[Geocoder] Geocoding "Sammanfattning natt, Västra Götalands län" → "sammanfattning natt, västra götalands"
+[Geocoder] Found "sammanfattning natt, västra götalands" in location index
+Cache SET: geocoding:sammanfattning natt, västra götalands län (expires in 2592000s), cache size: 41
+Cache SET: geocoding:normalized:sammanfattning natt, hallands län (expires in 7776000s), cache size: 42
+[Geocoder] Geocoding "Sammanfattning natt, Hallands län" → "sammanfattning natt, hallands"
+[Geocoder] Found "sammanfattning natt, hallands" in location index
+Cache SET: geocoding:sammanfattning natt, hallands län (expires in 2592000s), cache size: 43
+Cache SET: geocoding:normalized:misshandel, hässleholm (expires in 7776000s), cache size: 44
+[Geocoder] Geocoding "Misshandel, Hässleholm" → "hässleholm"
+[Geocoder] Found "hässleholm" in location index
+Cache SET: geocoding:misshandel, hässleholm (expires in 2592000s), cache size: 45
+[Geocoder] Geocoding "Övrigt, Malmö" → "övrigt, malmö"
+[Geocoder] Found "övrigt, malmö" in location index
+Cache SET: geocoding:övrigt, malmö (expires in 2592000s), cache size: 46
+[Geocoder] Geocoding "Rattfylleri, Hässleholm" → "rattfylleri, hässleholm"
+[Geocoder] Found "rattfylleri, hässleholm" in location index
+Cache SET: geocoding:rattfylleri, hässleholm (expires in 2592000s), cache size: 47
+Cache SET: geocoding:normalized:stöld, helsingborg (expires in 7776000s), cache size: 48
+[Geocoder] Geocoding "Stöld, Helsingborg" → "helsingborg"
+[Geocoder] Found "helsingborg" in location index
+Cache SET: geocoding:stöld, helsingborg (expires in 2592000s), cache size: 49
+[Geocoder] Geocoding "Rattfylleri, Staffanstorp" → "rattfylleri, staffanstorp"
+[Geocoder] Found "rattfylleri, staffanstorp" in location index
+Cache SET: geocoding:rattfylleri, staffanstorp (expires in 2592000s), cache size: 50
+[Geocoder] Geocoding "Rattfylleri, Helsingborg" → "rattfylleri, helsingborg"
+[Geocoder] Found "rattfylleri, helsingborg" in location index
+Cache SET: geocoding:rattfylleri, helsingborg (expires in 2592000s), cache size: 51
+[Geocoder] Geocoding "Narkotikabrott, Malmö" → "narkotikabrott, malmö"
+[Geocoder] Found "narkotikabrott, malmö" in location index
+Cache SET: geocoding:narkotikabrott, malmö (expires in 2592000s), cache size: 52
+Cache SET: geocoding:normalized:misshandel, karlskrona (expires in 7776000s), cache size: 53
+[Geocoder] Geocoding "Misshandel, Karlskrona" → "karlskrona"
+[Geocoder] Found "karlskrona" in location index
+Cache SET: geocoding:misshandel, karlskrona (expires in 2592000s), cache size: 54
+[Geocoder] Geocoding "Rattfylleri, Gävle" → "rattfylleri, gävle"
+[Geocoder] Found "rattfylleri, gävle" in location index
+Cache SET: geocoding:rattfylleri, gävle (expires in 2592000s), cache size: 55
+Cache SET: geocoding:normalized:sammanfattning natt, västmanlands län (expires in 7776000s), cache size: 56
+[Geocoder] Geocoding "Sammanfattning natt, Västmanlands län" → "sammanfattning natt, västmanlands"
+[Geocoder] Found "sammanfattning natt, västmanlands" in location index
+Cache SET: geocoding:sammanfattning natt, västmanlands län (expires in 2592000s), cache size: 57
+Cache SET: geocoding:normalized:trafikolycka, personskada, västerås (expires in 7776000s), cache size: 58
+[Geocoder] Geocoding "Trafikolycka, personskada, Västerås" → "personskada, västerås"
+[Geocoder] Found "personskada, västerås" in location index
+Cache SET: geocoding:trafikolycka, personskada, västerås (expires in 2592000s), cache size: 59
+Cache SET: geocoding:normalized:övrigt, västra götalands län (expires in 7776000s), cache size: 60
+[Geocoder] Geocoding "Övrigt, Västra Götalands län" → "övrigt, västra götalands"
+[Geocoder] Found "övrigt, västra götalands" in location index
+Cache SET: geocoding:övrigt, västra götalands län (expires in 2592000s), cache size: 61
+Cache SET: geocoding:normalized:övrigt, hallands län (expires in 7776000s), cache size: 62
+[Geocoder] Geocoding "Övrigt, Hallands län" → "övrigt, hallands"
+[Geocoder] Found "övrigt, hallands" in location index
+Cache SET: geocoding:övrigt, hallands län (expires in 2592000s), cache size: 63
+[Geocoder] Geocoding "Våld/hot mot tjänsteman, Luleå" → "våld/hot mot tjänsteman, luleå"
+[Geocoder] Found "våld/hot mot tjänsteman, luleå" in location index
+Cache SET: geocoding:våld/hot mot tjänsteman, luleå (expires in 2592000s), cache size: 64
+Cache SET: geocoding:normalized:trafikolycka, kristinehamn (expires in 7776000s), cache size: 65
+[Geocoder] Geocoding "Trafikolycka, Kristinehamn" → "kristinehamn"
+[Geocoder] Found "kristinehamn" in location index
+Cache SET: geocoding:trafikolycka, kristinehamn (expires in 2592000s), cache size: 66
+[Geocoder] Geocoding "Skyddslagen, Nynäshamn" → "skyddslagen, nynäshamn"
+[Geocoder] Found "skyddslagen, nynäshamn" in location index
+Cache SET: geocoding:skyddslagen, nynäshamn (expires in 2592000s), cache size: 67
+[Geocoder] Geocoding "Rattfylleri, Munkfors" → "rattfylleri, munkfors"
+[Geocoder] Found "rattfylleri, munkfors" in location index
+Cache SET: geocoding:rattfylleri, munkfors (expires in 2592000s), cache size: 68
+Cache SET: geocoding:normalized:knivlagen, umeå (expires in 7776000s), cache size: 69
+[Geocoder] Geocoding "Knivlagen, Umeå" → "umeå"
+[Geocoder] Found "umeå" in location index
+Cache SET: geocoding:knivlagen, umeå (expires in 2592000s), cache size: 70
+Cache SET: geocoding:normalized:stöld, sundsvall (expires in 7776000s), cache size: 71
+[Geocoder] Geocoding "Stöld, Sundsvall" → "sundsvall"
+[Geocoder] Found "sundsvall" in location index
+Cache SET: geocoding:stöld, sundsvall (expires in 2592000s), cache size: 72
+[Geocoder] Geocoding "Rattfylleri, Säffle" → "rattfylleri, säffle"
+[Geocoder] Found "rattfylleri, säffle" in location index
+Cache SET: geocoding:rattfylleri, säffle (expires in 2592000s), cache size: 73
+Cache SET: geocoding:normalized:bedrägeri, skellefteå (expires in 7776000s), cache size: 74
+[Geocoder] Geocoding "Bedrägeri, Skellefteå" → "skellefteå"
+[Geocoder] Found "skellefteå" in location index
+Cache SET: geocoding:bedrägeri, skellefteå (expires in 2592000s), cache size: 75
+Cache SET: geocoding:normalized:brand, härjedalen (expires in 7776000s), cache size: 76
+[Geocoder] Geocoding "Brand, Härjedalen" → "härjedalen"
+[Geocoder] Found "härjedalen" in location index
+Cache SET: geocoding:brand, härjedalen (expires in 2592000s), cache size: 77
+Cache SET: geocoding:normalized:brand, luleå (expires in 7776000s), cache size: 78
+[Geocoder] Geocoding "Brand, Luleå" → "luleå"
+[Geocoder] Found "luleå" in location index
+Cache SET: geocoding:brand, luleå (expires in 2592000s), cache size: 79
+Cache SET: geocoding:normalized:trafikkontroll, jämtlands län (expires in 7776000s), cache size: 80
+[Geocoder] Geocoding "Trafikkontroll, Jämtlands län" → "trafikkontroll, jämtlands"
+[Geocoder] Found "trafikkontroll, jämtlands" in location index
+Cache SET: geocoding:trafikkontroll, jämtlands län (expires in 2592000s), cache size: 81
+Cache SET: geocoding:normalized:brand, alingsås (expires in 7776000s), cache size: 82
+[Geocoder] Geocoding "Brand, Alingsås" → "alingsås"
+[Geocoder] Found "alingsås" in location index
+Cache SET: geocoding:brand, alingsås (expires in 2592000s), cache size: 83
+Cache SET: geocoding:normalized:trafikolycka, personskada, enköping (expires in 7776000s), cache size: 84
+[Geocoder] Geocoding "Trafikolycka, personskada, Enköping" → "personskada, enköping"
+[Geocoder] Found "personskada, enköping" in location index
+Cache SET: geocoding:trafikolycka, personskada, enköping (expires in 2592000s), cache size: 85
+[Geocoder] Geocoding "Narkotikabrott, Piteå" → "narkotikabrott, piteå"
+[Geocoder] Found "narkotikabrott, piteå" in location index
+Cache SET: geocoding:narkotikabrott, piteå (expires in 2592000s), cache size: 86
+[Geocoder] Geocoding "Rattfylleri, Sundsvall" → "rattfylleri, sundsvall"
+[Geocoder] Found "rattfylleri, sundsvall" in location index
+Cache SET: geocoding:rattfylleri, sundsvall (expires in 2592000s), cache size: 87
+Cache SET: geocoding:normalized:trafikolycka, västerås (expires in 7776000s), cache size: 88
+[Geocoder] Geocoding "Trafikolycka, Västerås" → "västerås"
+[Geocoder] Found "västerås" in location index
+Cache SET: geocoding:trafikolycka, västerås (expires in 2592000s), cache size: 89
+Cache SET: geocoding:normalized:bedrägeri, stockholm (expires in 7776000s), cache size: 90
+[Geocoder] Geocoding "Bedrägeri, Stockholm" → "stockholm"
+[Geocoder] Found "stockholm" in location index
+Cache SET: geocoding:bedrägeri, stockholm (expires in 2592000s), cache size: 91
+Cache SET: geocoding:normalized:trafikolycka, linköping (expires in 7776000s), cache size: 92
+[Geocoder] Geocoding "Trafikolycka, Linköping" → "linköping"
+[Geocoder] Found "linköping" in location index
+Cache SET: geocoding:trafikolycka, linköping (expires in 2592000s), cache size: 93
+[Geocoder] Geocoding "Ofredande/förargelse, Malmö" → "ofredande/förargelse, malmö"
+[Geocoder] Found "ofredande/förargelse, malmö" in location index
+Cache SET: geocoding:ofredande/förargelse, malmö (expires in 2592000s), cache size: 94
+[Geocoder] Geocoding "Ofredande/förargelse, Kävlinge" → "ofredande/förargelse, kävlinge"
+[Geocoder] Found "ofredande/förargelse, kävlinge" in location index
+Cache SET: geocoding:ofredande/förargelse, kävlinge (expires in 2592000s), cache size: 95
+Cache SET: geocoding:normalized:trafikolycka, rättvik (expires in 7776000s), cache size: 96
+[Geocoder] Geocoding "Trafikolycka, Rättvik" → "rättvik"
+[Geocoder] Found "rättvik" in location index
+Cache SET: geocoding:trafikolycka, rättvik (expires in 2592000s), cache size: 97
+Cache SET: geocoding:normalized:brand, örnsköldsvik (expires in 7776000s), cache size: 98
+[Geocoder] Geocoding "Brand, Örnsköldsvik" → "örnsköldsvik"
+[Geocoder] Found "örnsköldsvik" in location index
+Cache SET: geocoding:brand, örnsköldsvik (expires in 2592000s), cache size: 99
+[Geocoder] Geocoding "Stöld/inbrott, Malmö" → "stöld/inbrott, malmö"
+[Geocoder] Found "stöld/inbrott, malmö" in location index
+Cache SET: geocoding:stöld/inbrott, malmö (expires in 2592000s), cache size: 100
+Cache SET: geocoding:normalized:trafikolycka, kinda (expires in 7776000s), cache size: 101
+[Geocoder] Geocoding "Trafikolycka, Kinda" → "kinda"
+[Geocoder] Found "kinda" in location index
+Cache SET: geocoding:trafikolycka, kinda (expires in 2592000s), cache size: 102
+Cache SET: geocoding:normalized:trafikolycka, malmö (expires in 7776000s), cache size: 103
+[Geocoder] Geocoding "Trafikolycka, Malmö" → "malmö"
+[Geocoder] Found "malmö" in location index
+Cache SET: geocoding:trafikolycka, malmö (expires in 2592000s), cache size: 104
+[Geocoder] Geocoding "Narkotikabrott, Umeå" → "narkotikabrott, umeå"
+[Geocoder] Found "narkotikabrott, umeå" in location index
+Cache SET: geocoding:narkotikabrott, umeå (expires in 2592000s), cache size: 105
+Cache SET: geocoding:normalized:trafikolycka, haparanda (expires in 7776000s), cache size: 106
+[Geocoder] Geocoding "Trafikolycka, Haparanda" → "haparanda"
+[Geocoder] Found "haparanda" in location index
+Cache SET: geocoding:trafikolycka, haparanda (expires in 2592000s), cache size: 107
+[Geocoder] Geocoding "Rattfylleri, Lund" → "rattfylleri, lund"
+[Geocoder] Found "rattfylleri, lund" in location index
+Cache SET: geocoding:rattfylleri, lund (expires in 2592000s), cache size: 108
+Cache SET: geocoding:normalized:trafikolycka, singel, avesta (expires in 7776000s), cache size: 109
+[Geocoder] Geocoding "Trafikolycka, singel, Avesta" → "singel, avesta"
+[Geocoder] Found "singel, avesta" in location index
+Cache SET: geocoding:trafikolycka, singel, avesta (expires in 2592000s), cache size: 110
+Cache SET: geocoding:normalized:trafikolycka, vilt, askersund (expires in 7776000s), cache size: 111
+[Geocoder] Geocoding "Trafikolycka, vilt, Askersund" → "vilt, askersund"
+[Geocoder] Found "vilt, askersund" in location index
+Cache SET: geocoding:trafikolycka, vilt, askersund (expires in 2592000s), cache size: 112
+Cache SET: geocoding:normalized:trafikolycka, personskada, gävle (expires in 7776000s), cache size: 113
+[Geocoder] Geocoding "Trafikolycka, personskada, Gävle" → "personskada, gävle"
+[Geocoder] Found "personskada, gävle" in location index
+Cache SET: geocoding:trafikolycka, personskada, gävle (expires in 2592000s), cache size: 114
+Cache SET: geocoding:normalized:trafikolycka, personskada, ulricehamn (expires in 7776000s), cache size: 115
+[Geocoder] Geocoding "Trafikolycka, personskada, Ulricehamn" → "personskada, ulricehamn"
+[Geocoder] Found "personskada, ulricehamn" in location index
+Cache SET: geocoding:trafikolycka, personskada, ulricehamn (expires in 2592000s), cache size: 116
+Cache SET: geocoding:normalized:brand, karlstad (expires in 7776000s), cache size: 117
+[Geocoder] Geocoding "Brand, Karlstad" → "karlstad"
+[Geocoder] Found "karlstad" in location index
+Cache SET: geocoding:brand, karlstad (expires in 2592000s), cache size: 118
+Cache SET: geocoding:normalized:trafikolycka, filipstad (expires in 7776000s), cache size: 119
+[Geocoder] Geocoding "Trafikolycka, Filipstad" → "filipstad"
+[Geocoder] Found "filipstad" in location index
+Cache SET: geocoding:trafikolycka, filipstad (expires in 2592000s), cache size: 120
+Cache SET: geocoding:normalized:rån, ekerö (expires in 7776000s), cache size: 121
+[Geocoder] Geocoding "Rån, Ekerö" → "ekerö"
+[Geocoder] Found "ekerö" in location index
+Cache SET: geocoding:rån, ekerö (expires in 2592000s), cache size: 122
+Cache SET: geocoding:normalized:trafikolycka, singel, lekeberg (expires in 7776000s), cache size: 123
+[Geocoder] Geocoding "Trafikolycka, singel, Lekeberg" → "singel, lekeberg"
+[Geocoder] Found "singel, lekeberg" in location index
+Cache SET: geocoding:trafikolycka, singel, lekeberg (expires in 2592000s), cache size: 124
+[Geocoder] Geocoding "Övrigt, Sigtuna" → "övrigt, sigtuna"
+[Geocoder] Found "övrigt, sigtuna" in location index
+Cache SET: geocoding:övrigt, sigtuna (expires in 2592000s), cache size: 125
+Cache SET: geocoding:normalized:trafikolycka, sundsvall (expires in 7776000s), cache size: 126
+[Geocoder] Geocoding "Trafikolycka, Sundsvall" → "sundsvall"
+[Geocoder] Found "sundsvall" in location index
+Cache SET: geocoding:trafikolycka, sundsvall (expires in 2592000s), cache size: 127
+[Geocoder] Geocoding "Övrigt, Lerum" → "övrigt, lerum"
+[Geocoder] Found "övrigt, lerum" in location index
+Cache SET: geocoding:övrigt, lerum (expires in 2592000s), cache size: 128
+[Geocoder] Geocoding "Mord/dråp, Kramfors" → "mord/dråp, kramfors"
+[Geocoder] Found "mord/dråp, kramfors" in location index
+Cache SET: geocoding:mord/dråp, kramfors (expires in 2592000s), cache size: 129
+Cache SET: geocoding:normalized:brand, västerås (expires in 7776000s), cache size: 130
+[Geocoder] Geocoding "Brand, Västerås" → "västerås"
+[Geocoder] Found "västerås" in location index
+Cache SET: geocoding:brand, västerås (expires in 2592000s), cache size: 131
+Cache SET: geocoding:normalized:brand, hässleholm (expires in 7776000s), cache size: 132
+[Geocoder] Geocoding "Brand, Hässleholm" → "hässleholm"
+[Geocoder] Found "hässleholm" in location index
+Cache SET: geocoding:brand, hässleholm (expires in 2592000s), cache size: 133
+Cache SET: geocoding:normalized:bedrägeri, söderhamn (expires in 7776000s), cache size: 134
+[Geocoder] Geocoding "Bedrägeri, Söderhamn" → "söderhamn"
+[Geocoder] Found "söderhamn" in location index
+Cache SET: geocoding:bedrägeri, söderhamn (expires in 2592000s), cache size: 135
+Cache SET: geocoding:normalized:brand, årjäng (expires in 7776000s), cache size: 136
+[Geocoder] Geocoding "Brand, Årjäng" → "årjäng"
+[Geocoder] Found "årjäng" in location index
+Cache SET: geocoding:brand, årjäng (expires in 2592000s), cache size: 137
+Cache SET: geocoding:normalized:trafikkontroll, västerbottens län (expires in 7776000s), cache size: 138
+[Geocoder] Geocoding "Trafikkontroll, Västerbottens län" → "trafikkontroll, västerbottens"
+[Geocoder] Found "trafikkontroll, västerbottens" in location index
+Cache SET: geocoding:trafikkontroll, västerbottens län (expires in 2592000s), cache size: 139
+Cache SET: geocoding:normalized:knivlagen, karlstad (expires in 7776000s), cache size: 140
+[Geocoder] Geocoding "Knivlagen, Karlstad" → "karlstad"
+[Geocoder] Found "karlstad" in location index
+Cache SET: geocoding:knivlagen, karlstad (expires in 2592000s), cache size: 141
+[Geocoder] Geocoding "Övrigt, Umeå" → "övrigt, umeå"
+[Geocoder] Found "övrigt, umeå" in location index
+Cache SET: geocoding:övrigt, umeå (expires in 2592000s), cache size: 142
+[Geocoder] Geocoding "Vapenlagen, Stockholm" → "vapenlagen, stockholm"
+[Geocoder] Found "vapenlagen, stockholm" in location index
+Cache SET: geocoding:vapenlagen, stockholm (expires in 2592000s), cache size: 143
+Cache SET: geocoding:normalized:stöld, luleå (expires in 7776000s), cache size: 144
+[Geocoder] Geocoding "Stöld, Luleå" → "luleå"
+[Geocoder] Found "luleå" in location index
+Cache SET: geocoding:stöld, luleå (expires in 2592000s), cache size: 145
+Cache SET: geocoding:normalized:trafikkontroll, norrbottens län (expires in 7776000s), cache size: 146
+[Geocoder] Geocoding "Trafikkontroll, Norrbottens län" → "trafikkontroll, norrbottens"
+[Geocoder] Found "trafikkontroll, norrbottens" in location index
+Cache SET: geocoding:trafikkontroll, norrbottens län (expires in 2592000s), cache size: 147
+[Geocoder] Geocoding "Kontroll person/fordon, Växjö" → "kontroll person/fordon, växjö"
+[Geocoder] Found "kontroll person/fordon, växjö" in location index
+Cache SET: geocoding:kontroll person/fordon, växjö (expires in 2592000s), cache size: 148
+Cache SET: geocoding:normalized:trafikolycka, personskada, ale (expires in 7776000s), cache size: 149
+[Geocoder] Geocoding "Trafikolycka, personskada, Ale" → "personskada, ale"
+[Geocoder] Found "personskada, ale" in location index
+Cache SET: geocoding:trafikolycka, personskada, ale (expires in 2592000s), cache size: 150
+Cache SET: geocoding:normalized:trafikolycka, höör (expires in 7776000s), cache size: 151
+[Geocoder] Geocoding "Trafikolycka, Höör" → "höör"
+[Geocoder] Found "höör" in location index
+Cache SET: geocoding:trafikolycka, höör (expires in 2592000s), cache size: 152
+[Geocoder] Geocoding "Åldringsbrott, Köping" → "åldringsbrott, köping"
+[Geocoder] Found "åldringsbrott, köping" in location index
+Cache SET: geocoding:åldringsbrott, köping (expires in 2592000s), cache size: 153
+[Geocoder] Geocoding "Stöld/inbrott, Västerås" → "stöld/inbrott, västerås"
+[Geocoder] Found "stöld/inbrott, västerås" in location index
+Cache SET: geocoding:stöld/inbrott, västerås (expires in 2592000s), cache size: 154
+Cache SET: geocoding:normalized:trafikolycka, åstorp (expires in 7776000s), cache size: 155
+[Geocoder] Geocoding "Trafikolycka, Åstorp" → "åstorp"
+[Geocoder] Found "åstorp" in location index
+Cache SET: geocoding:trafikolycka, åstorp (expires in 2592000s), cache size: 156
+Cache SET: geocoding:normalized:brand, upplands-bro (expires in 7776000s), cache size: 157
+[Geocoder] Geocoding "Brand, Upplands-bro" → "upplands bro"
+[Geocoder] Found "upplands bro" in location index
+Cache SET: geocoding:brand, upplands-bro (expires in 2592000s), cache size: 158
+Cache SET: geocoding:normalized:trafikolycka, karlstad (expires in 7776000s), cache size: 159
+[Geocoder] Geocoding "Trafikolycka, Karlstad" → "karlstad"
+[Geocoder] Found "karlstad" in location index
+Cache SET: geocoding:trafikolycka, karlstad (expires in 2592000s), cache size: 160
+Cache SET: geocoding:normalized:trafikolycka, svedala (expires in 7776000s), cache size: 161
+[Geocoder] Geocoding "Trafikolycka, Svedala" → "svedala"
+[Geocoder] Found "svedala" in location index
+Cache SET: geocoding:trafikolycka, svedala (expires in 2592000s), cache size: 162
+Cache SET: geocoding:normalized:trafikolycka, båstad (expires in 7776000s), cache size: 163
+[Geocoder] Geocoding "Trafikolycka, Båstad" → "båstad"
+[Geocoder] Found "båstad" in location index
+Cache SET: geocoding:trafikolycka, båstad (expires in 2592000s), cache size: 164
+[Geocoder] Geocoding "Trafikhinder, Trelleborg" → "trafikhinder, trelleborg"
+[Geocoder] Found "trafikhinder, trelleborg" in location index
+Cache SET: geocoding:trafikhinder, trelleborg (expires in 2592000s), cache size: 165
+Cache SET: geocoding:normalized:misshandel, gävle (expires in 7776000s), cache size: 166
+[Geocoder] Geocoding "Misshandel, Gävle" → "gävle"
+[Geocoder] Found "gävle" in location index
+Cache SET: geocoding:misshandel, gävle (expires in 2592000s), cache size: 167
+Cache SET: geocoding:normalized:stöld, malmö (expires in 7776000s), cache size: 168
+[Geocoder] Geocoding "Stöld, Malmö" → "malmö"
+[Geocoder] Found "malmö" in location index
+Cache SET: geocoding:stöld, malmö (expires in 2592000s), cache size: 169
+[Geocoder] Geocoding "Trafikbrott, Järfälla" → "trafikbrott, järfälla"
+[Geocoder] Found "trafikbrott, järfälla" in location index
+Cache SET: geocoding:trafikbrott, järfälla (expires in 2592000s), cache size: 170
+[Geocoder] Geocoding "Vållande till kroppsskada, Karlskrona" → "vållande till kroppsskada, karlskrona"
+[Geocoder] Found "vållande till kroppsskada, karlskrona" in location index
+Cache SET: geocoding:vållande till kroppsskada, karlskrona (expires in 2592000s), cache size: 171
+Cache SET: geocoding:normalized:misshandel, staffanstorp (expires in 7776000s), cache size: 172
+[Geocoder] Geocoding "Misshandel, Staffanstorp" → "staffanstorp"
+[Geocoder] Found "staffanstorp" in location index
+Cache SET: geocoding:misshandel, staffanstorp (expires in 2592000s), cache size: 173
+[Geocoder] Geocoding "Skadegörelse, Svalöv" → "skadegörelse, svalöv"
+[Geocoder] Found "skadegörelse, svalöv" in location index
+Cache SET: geocoding:skadegörelse, svalöv (expires in 2592000s), cache size: 174
+Cache SET: geocoding:normalized:stöld, kristianstad (expires in 7776000s), cache size: 175
+[Geocoder] Geocoding "Stöld, Kristianstad" → "kristianstad"
+[Geocoder] Found "kristianstad" in location index
+Cache SET: geocoding:stöld, kristianstad (expires in 2592000s), cache size: 176
+[Geocoder] Geocoding "Åldringsbrott, Södertälje" → "åldringsbrott, södertälje"
+[Geocoder] Found "åldringsbrott, södertälje" in location index
+Cache SET: geocoding:åldringsbrott, södertälje (expires in 2592000s), cache size: 177
+[Geocoder] Geocoding "Trafikbrott, Luleå" → "trafikbrott, luleå"
+[Geocoder] Found "trafikbrott, luleå" in location index
+Cache SET: geocoding:trafikbrott, luleå (expires in 2592000s), cache size: 178
+Cache SET: geocoding:normalized:trafikkontroll, västernorrlands län (expires in 7776000s), cache size: 179
+[Geocoder] Geocoding "Trafikkontroll, Västernorrlands län" → "trafikkontroll, västernorrlands"
+[Geocoder] Found "trafikkontroll, västernorrlands" in location index
+Cache SET: geocoding:trafikkontroll, västernorrlands län (expires in 2592000s), cache size: 180
+Cache SET: geocoding:normalized:misshandel, lund (expires in 7776000s), cache size: 181
+[Geocoder] Geocoding "Misshandel, Lund" → "lund"
+[Geocoder] Found "lund" in location index
+Cache SET: geocoding:misshandel, lund (expires in 2592000s), cache size: 182
+[Geocoder] Geocoding "Räddningsinsats, Skinnskatteberg" → "räddningsinsats, skinnskatteberg"
+[Geocoder] Found "räddningsinsats, skinnskatteberg" in location index
+Cache SET: geocoding:räddningsinsats, skinnskatteberg (expires in 2592000s), cache size: 183
+[Geocoder] Geocoding "Rattfylleri, Kramfors" → "rattfylleri, kramfors"
+[Geocoder] Found "rattfylleri, kramfors" in location index
+Cache SET: geocoding:rattfylleri, kramfors (expires in 2592000s), cache size: 184
+[Geocoder] Geocoding "Åldringsbrott, Stockholm" → "åldringsbrott, stockholm"
+[Geocoder] Found "åldringsbrott, stockholm" in location index
+Cache SET: geocoding:åldringsbrott, stockholm (expires in 2592000s), cache size: 185
+Cache SET: geocoding:normalized:inbrott, luleå (expires in 7776000s), cache size: 186
+[Geocoder] Geocoding "Inbrott, Luleå" → "luleå"
+[Geocoder] Found "luleå" in location index
+Cache SET: geocoding:inbrott, luleå (expires in 2592000s), cache size: 187
+Cache SET: geocoding:normalized:misshandel, skellefteå (expires in 7776000s), cache size: 188
+[Geocoder] Geocoding "Misshandel, Skellefteå" → "skellefteå"
+[Geocoder] Found "skellefteå" in location index
+Cache SET: geocoding:misshandel, skellefteå (expires in 2592000s), cache size: 189
+Cache SET: geocoding:normalized:trafikolycka, sandviken (expires in 7776000s), cache size: 190
+[Geocoder] Geocoding "Trafikolycka, Sandviken" → "sandviken"
+[Geocoder] Found "sandviken" in location index
+Cache SET: geocoding:trafikolycka, sandviken (expires in 2592000s), cache size: 191
+[Geocoder] Geocoding "Fylleri/LOB, Umeå" → "fylleri/lob, umeå"
+[Geocoder] Found "fylleri/lob, umeå" in location index
+Cache SET: geocoding:fylleri/lob, umeå (expires in 2592000s), cache size: 192
+[Geocoder] Geocoding "Åldringsbrott, Botkyrka" → "åldringsbrott, botkyrka"
+[Geocoder] Found "åldringsbrott, botkyrka" in location index
+Cache SET: geocoding:åldringsbrott, botkyrka (expires in 2592000s), cache size: 193
+[Geocoder] Geocoding "Åldringsbrott, Haninge" → "åldringsbrott, haninge"
+[Geocoder] Found "åldringsbrott, haninge" in location index
+Cache SET: geocoding:åldringsbrott, haninge (expires in 2592000s), cache size: 194
+Cache SET: geocoding:normalized:trafikolycka, hässleholm (expires in 7776000s), cache size: 195
+[Geocoder] Geocoding "Trafikolycka, Hässleholm" → "hässleholm"
+[Geocoder] Found "hässleholm" in location index
+Cache SET: geocoding:trafikolycka, hässleholm (expires in 2592000s), cache size: 196
+Cache SET: geocoding:normalized:trafikolycka, höganäs (expires in 7776000s), cache size: 197
+[Geocoder] Geocoding "Trafikolycka, Höganäs" → "höganäs"
+[Geocoder] Found "höganäs" in location index
+Cache SET: geocoding:trafikolycka, höganäs (expires in 2592000s), cache size: 198
+Cache SET: geocoding:normalized:misshandel, degerfors (expires in 7776000s), cache size: 199
+[Geocoder] Geocoding "Misshandel, Degerfors" → "degerfors"
+[Geocoder] Found "degerfors" in location index
+Cache SET: geocoding:misshandel, degerfors (expires in 2592000s), cache size: 200
+[Geocoder] Geocoding "Arbetsplatsolycka, Vimmerby" → "arbetsplatsolycka, vimmerby"
+[Geocoder] Found "arbetsplatsolycka, vimmerby" in location index
+Cache SET: geocoding:arbetsplatsolycka, vimmerby (expires in 2592000s), cache size: 201
+[Geocoder] Geocoding "Rattfylleri, Filipstad" → "rattfylleri, filipstad"
+[Geocoder] Found "rattfylleri, filipstad" in location index
+Cache SET: geocoding:rattfylleri, filipstad (expires in 2592000s), cache size: 202
+Cache SET: geocoding:normalized:knivlagen, borlänge (expires in 7776000s), cache size: 203
+[Geocoder] Geocoding "Knivlagen, Borlänge" → "borlänge"
+[Geocoder] Found "borlänge" in location index
+Cache SET: geocoding:knivlagen, borlänge (expires in 2592000s), cache size: 204
+Cache SET: geocoding:normalized:knivlagen, luleå (expires in 7776000s), cache size: 205
+[Geocoder] Geocoding "Knivlagen, Luleå" → "luleå"
+[Geocoder] Found "luleå" in location index
+Cache SET: geocoding:knivlagen, luleå (expires in 2592000s), cache size: 206
+[Geocoder] Geocoding "Rattfylleri, Trosa" → "rattfylleri, trosa"
+[Geocoder] Found "rattfylleri, trosa" in location index
+Cache SET: geocoding:rattfylleri, trosa (expires in 2592000s), cache size: 207
+[Geocoder] Geocoding "Försvunnen person, Eslöv" → "försvunnen person, eslöv"
+[Geocoder] Found "försvunnen person, eslöv" in location index
+Cache SET: geocoding:försvunnen person, eslöv (expires in 2592000s), cache size: 208
+[Geocoder] Geocoding "Fylleri/LOB, Uppsala" → "fylleri/lob, uppsala"
+[Geocoder] Found "fylleri/lob, uppsala" in location index
+Cache SET: geocoding:fylleri/lob, uppsala (expires in 2592000s), cache size: 209
+[Geocoder] Geocoding "Olovlig körning, Sundsvall" → "olovlig körning, sundsvall"
+[Geocoder] Found "olovlig körning, sundsvall" in location index
+Cache SET: geocoding:olovlig körning, sundsvall (expires in 2592000s), cache size: 210
+Cache SET: geocoding:normalized:stöld, klippan (expires in 7776000s), cache size: 211
+[Geocoder] Geocoding "Stöld, Klippan" → "klippan"
+[Geocoder] Found "klippan" in location index
+Cache SET: geocoding:stöld, klippan (expires in 2592000s), cache size: 212
+Cache SET: geocoding:normalized:brand, eskilstuna (expires in 7776000s), cache size: 213
+[Geocoder] Geocoding "Brand, Eskilstuna" → "eskilstuna"
+[Geocoder] Found "eskilstuna" in location index
+Cache SET: geocoding:brand, eskilstuna (expires in 2592000s), cache size: 214
+Cache SET: geocoding:normalized:stöld, skellefteå (expires in 7776000s), cache size: 215
+[Geocoder] Geocoding "Stöld, Skellefteå" → "skellefteå"
+[Geocoder] Found "skellefteå" in location index
+Cache SET: geocoding:stöld, skellefteå (expires in 2592000s), cache size: 216
+Cache SET: geocoding:normalized:brand, sollefteå (expires in 7776000s), cache size: 217
+[Geocoder] Geocoding "Brand, Sollefteå" → "sollefteå"
+[Geocoder] Found "sollefteå" in location index
+Cache SET: geocoding:brand, sollefteå (expires in 2592000s), cache size: 218
+Cache SET: geocoding:normalized:stöld, håbo (expires in 7776000s), cache size: 219
+[Geocoder] Geocoding "Stöld, Håbo" → "håbo"
+[Geocoder] Found "håbo" in location index
+Cache SET: geocoding:stöld, håbo (expires in 2592000s), cache size: 220
+[Geocoder] Geocoding "Ordningslagen, Uppsala" → "ordningslagen, uppsala"
+[Geocoder] Found "ordningslagen, uppsala" in location index
+Cache SET: geocoding:ordningslagen, uppsala (expires in 2592000s), cache size: 221
+Cache SET: geocoding:normalized:trafikolycka, uppvidinge (expires in 7776000s), cache size: 222
+[Geocoder] Geocoding "Trafikolycka, Uppvidinge" → "uppvidinge"
+[Geocoder] Found "uppvidinge" in location index
+Cache SET: geocoding:trafikolycka, uppvidinge (expires in 2592000s), cache size: 223
+Cache SET: geocoding:normalized:trafikolycka, vilt, strömsund (expires in 7776000s), cache size: 224
+[Geocoder] Geocoding "Trafikolycka, vilt, Strömsund" → "vilt, strömsund"
+[Geocoder] Found "vilt, strömsund" in location index
+Cache SET: geocoding:trafikolycka, vilt, strömsund (expires in 2592000s), cache size: 225
+Cache SET: geocoding:normalized:rån, helsingborg (expires in 7776000s), cache size: 226
+[Geocoder] Geocoding "Rån, Helsingborg" → "helsingborg"
+[Geocoder] Found "helsingborg" in location index
+Cache SET: geocoding:rån, helsingborg (expires in 2592000s), cache size: 227
+Cache SET: geocoding:normalized:trafikolycka, singel, boxholm (expires in 7776000s), cache size: 228
+[Geocoder] Geocoding "Trafikolycka, singel, Boxholm" → "singel, boxholm"
+[Geocoder] Found "singel, boxholm" in location index
+Cache SET: geocoding:trafikolycka, singel, boxholm (expires in 2592000s), cache size: 229
+[Geocoder] Geocoding "Trafikkontroll, Åre" → "trafikkontroll, åre"
+[Geocoder] Found "trafikkontroll, åre" in location index
+Cache SET: geocoding:trafikkontroll, åre (expires in 2592000s), cache size: 230
+Cache SET: geocoding:normalized:trafikolycka, luleå (expires in 7776000s), cache size: 231
+[Geocoder] Geocoding "Trafikolycka, Luleå" → "luleå"
+[Geocoder] Found "luleå" in location index
+Cache SET: geocoding:trafikolycka, luleå (expires in 2592000s), cache size: 232
+Cache SET: geocoding:normalized:trafikolycka, härjedalen (expires in 7776000s), cache size: 233
+[Geocoder] Geocoding "Trafikolycka, Härjedalen" → "härjedalen"
+[Geocoder] Found "härjedalen" in location index
+Cache SET: geocoding:trafikolycka, härjedalen (expires in 2592000s), cache size: 234
+Cache SET: geocoding:normalized:trafikolycka, vilt, pajala (expires in 7776000s), cache size: 235
+[Geocoder] Geocoding "Trafikolycka, vilt, Pajala" → "vilt, pajala"
+[Geocoder] Found "vilt, pajala" in location index
+Cache SET: geocoding:trafikolycka, vilt, pajala (expires in 2592000s), cache size: 236
+[Geocoder] Geocoding "Djur, Sjöbo" → "djur, sjöbo"
+[Geocoder] Found "djur, sjöbo" in location index
+Cache SET: geocoding:djur, sjöbo (expires in 2592000s), cache size: 237
+Cache SET: geocoding:normalized:trafikolycka, lysekil (expires in 7776000s), cache size: 238
+[Geocoder] Geocoding "Trafikolycka, Lysekil" → "lysekil"
+[Geocoder] Found "lysekil" in location index
+Cache SET: geocoding:trafikolycka, lysekil (expires in 2592000s), cache size: 239
+Cache SET: geocoding:normalized:trafikolycka, vänersborg (expires in 7776000s), cache size: 240
+[Geocoder] Geocoding "Trafikolycka, Vänersborg" → "vänersborg"
+[Geocoder] Found "vänersborg" in location index
+Cache SET: geocoding:trafikolycka, vänersborg (expires in 2592000s), cache size: 241
+Cache SET: geocoding:normalized:misshandel, åstorp (expires in 7776000s), cache size: 242
+[Geocoder] Geocoding "Misshandel, Åstorp" → "åstorp"
+[Geocoder] Found "åstorp" in location index
+Cache SET: geocoding:misshandel, åstorp (expires in 2592000s), cache size: 243
+Cache SET: geocoding:normalized:trafikolycka, vilt, örebro (expires in 7776000s), cache size: 244
+[Geocoder] Geocoding "Trafikolycka, vilt, Örebro" → "vilt, örebro"
+[Geocoder] Found "vilt, örebro" in location index
+Cache SET: geocoding:trafikolycka, vilt, örebro (expires in 2592000s), cache size: 245
+Cache SET: geocoding:normalized:trafikolycka, kil (expires in 7776000s), cache size: 246
+[Geocoder] Geocoding "Trafikolycka, Kil" → "kil"
+[Geocoder] Found "kil" in location index
+Cache SET: geocoding:trafikolycka, kil (expires in 2592000s), cache size: 247
+Cache SET: geocoding:normalized:övrigt, örebro län (expires in 7776000s), cache size: 248
+[Geocoder] Geocoding "Övrigt, Örebro län" → "övrigt, örebro"
+[Geocoder] Found "övrigt, örebro" in location index
+Cache SET: geocoding:övrigt, örebro län (expires in 2592000s), cache size: 249
+Cache SET: geocoding:normalized:övrigt, dalarnas län (expires in 7776000s), cache size: 250
+[Geocoder] Geocoding "Övrigt, Dalarnas län" → "övrigt, dalarnas"
+[Geocoder] Found "övrigt, dalarnas" in location index
+Cache SET: geocoding:övrigt, dalarnas län (expires in 2592000s), cache size: 251
+Cache SET: geocoding:normalized:övrigt, värmlands län (expires in 7776000s), cache size: 252
+[Geocoder] Geocoding "Övrigt, Värmlands län" → "övrigt, värmlands"
+[Geocoder] Found "övrigt, värmlands" in location index
+Cache SET: geocoding:övrigt, värmlands län (expires in 2592000s), cache size: 253
+Cache SET: geocoding:normalized:övrigt, kalmar län (expires in 7776000s), cache size: 254
+[Geocoder] Geocoding "Övrigt, Kalmar län" → "övrigt, kalmar"
+[Geocoder] Found "övrigt, kalmar" in location index
+Cache SET: geocoding:övrigt, kalmar län (expires in 2592000s), cache size: 255
+Cache SET: geocoding:normalized:övrigt, skåne län (expires in 7776000s), cache size: 256
+[Geocoder] Geocoding "Övrigt, Skåne län" → "övrigt, skåne"
+[Geocoder] Found "övrigt, skåne" in location index
+Cache SET: geocoding:övrigt, skåne län (expires in 2592000s), cache size: 257
+Cache SET: geocoding:normalized:övrigt, blekinge län (expires in 7776000s), cache size: 258
+[Geocoder] Geocoding "Övrigt, Blekinge län" → "övrigt, blekinge"
+[Geocoder] Found "övrigt, blekinge" in location index
+Cache SET: geocoding:övrigt, blekinge län (expires in 2592000s), cache size: 259
+Cache SET: geocoding:normalized:övrigt, kronobergs län (expires in 7776000s), cache size: 260
+[Geocoder] Geocoding "Övrigt, Kronobergs län" → "övrigt, kronobergs"
+[Geocoder] Found "övrigt, kronobergs" in location index
+Cache SET: geocoding:övrigt, kronobergs län (expires in 2592000s), cache size: 261
+Cache SET: geocoding:normalized:stöld, norrköping (expires in 7776000s), cache size: 262
+[Geocoder] Geocoding "Stöld, Norrköping" → "norrköping"
+[Geocoder] Found "norrköping" in location index
+Cache SET: geocoding:stöld, norrköping (expires in 2592000s), cache size: 263
+Cache SET: geocoding:normalized:sammanfattning kväll och natt, västra götalands län (expires in 7776000s), cache size: 264
+[Geocoder] Geocoding "Sammanfattning kväll och natt, Västra Götalands län" → "sammanfattning kväll och natt, västra götalands"
+[Geocoder] Found "sammanfattning kväll och natt, västra götalands" in location index
+Cache SET: geocoding:sammanfattning kväll och natt, västra götalands län (expires in 2592000s), cache size: 265
+Cache SET: geocoding:normalized:sammanfattning kväll och natt, hallands län (expires in 7776000s), cache size: 266
+[Geocoder] Geocoding "Sammanfattning kväll och natt, Hallands län" → "sammanfattning kväll och natt, hallands"
+[Geocoder] Found "sammanfattning kväll och natt, hallands" in location index
+Cache SET: geocoding:sammanfattning kväll och natt, hallands län (expires in 2592000s), cache size: 267
+Cache SET: geocoding:normalized:sammanfattning kväll och natt, kronobergs län (expires in 7776000s), cache size: 268
+[Geocoder] Geocoding "Sammanfattning kväll och natt, Kronobergs län" → "sammanfattning kväll och natt, kronobergs"
+[Geocoder] Found "sammanfattning kväll och natt, kronobergs" in location index
+Cache SET: geocoding:sammanfattning kväll och natt, kronobergs län (expires in 2592000s), cache size: 269
+Successfully converted 200 items to events
+Fetched 200 events from RSS feed
+Connected to SQLite database at: /Users/johan/Desktop/API-RSS-NEXTJS/api/data/polisapp.sqlite
+Sync complete: 0 inserted, 0 updated, 200 unchanged (0.26s)
+Scheduled sync completed in 261ms
+GET /api/status
+GET /api/scheduler
+POST /api/scheduler/sync
+Forcing RSS sync now
+RSS feed cache has been reset
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+Fetching RSS feed from: https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/
+Successfully fetched 200 items from RSS feed
+Cache SET: rss:https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/ (expires in 900s), cache size: 269
+Converting 200 RSS items to events...
+Successfully converted 200 items to events
+Fetched 200 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 200 unchanged (0.27s)
+Scheduled sync completed in 274ms
+GET /api/scheduler
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 1ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 1ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 1ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 1ms
