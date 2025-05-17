@@ -1,0 +1,17 @@
+[phases.setup]
+nixPkgs = ["nodejs", "yarn"]
+
+[phases.install]
+workingDirectory = "./api"
+cmds = ["yarn install --frozen-lockfile"]
+
+[phases.build]
+workingDirectory = "./api"
+cmds = ["yarn build"]
+
+[start]
+workingDirectory = "./api"
+cmd = "node simple-server.js"
+
+[variables]
+NODE_ENV = "production" 

@@ -1,0 +1,15 @@
+{
+  "name": "api-rss-nextjs",
+  "version": "1.0.0",
+  "description": "A RESTful API service that retrieves, geocodes, and provides data from the Swedish Police public RSS feed of events",
+  "main": "api/simple-server.js",
+  "private": true,
+  "scripts": {
+    "start": "cd api && node simple-server.js",
+    "build": "cd api && npm run build",
+    "install": "cd api && npm install"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+} 
