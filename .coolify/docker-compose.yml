@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: .coolify/Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - NODE_ENV=production
+      - PORT=8888
+      - HOSTNAME=0.0.0.0
+    restart: unless-stopped
+    volumes:
+      - api_data:/app/api/data
+
+volumes:
+  api_data: 
