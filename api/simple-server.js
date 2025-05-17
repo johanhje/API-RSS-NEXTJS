@@ -24,6 +24,8 @@ console.log(`STARTING SERVER ON ${HOSTNAME}:${PORT}`);
 console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 console.log(`Base path: "${BASE_PATH}"`);
 console.log(`Working directory: ${process.cwd()}`);
+console.log(`Process ID: ${process.pid}`);
+console.log(`Available environment variables: ${Object.keys(process.env).join(', ')}`);
 console.log('=========================================');
 
 // Förhindra att servern kraschar på oväntade fel
@@ -40,7 +42,16 @@ process.on('unhandledRejection', (reason, promise) => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const pkgPath = path.join(__dirname, 'package.json');
-const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+console.log(`Checking package.json at: ${pkgPath}`);
+
+let pkg;
+try {
+  pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf8'));
+  console.log(`Package version: ${pkg.version}`);
+} catch (error) {
+  console.error(`Error reading package.json: ${error.message}`);
+  pkg = { version: 'unknown', name: 'api-server', description: 'API Server' };
+}
 
 // Initialisera API-tjänster
 console.log(`Initialiserar API-tjänster på ${HOSTNAME}:${PORT}...`);
@@ -51,11 +62,28 @@ try {
   console.error('Fel vid initialisering av tjänster:', error);
 }
 
+// Verifiera att databaskatalogen finns
+try {
+  const dataDir = path.join(__dirname, 'data');
+  console.log(`Checking data directory: ${dataDir}`);
+  if (fs.existsSync(dataDir)) {
+    console.log(`Data directory exists, contents: ${fs.readdirSync(dataDir).join(', ')}`);
+  } else {
+    console.warn(`Data directory does not exist at ${dataDir}`);
+    console.log('Creating data directory...');
+    fs.mkdirSync(dataDir, { recursive: true });
+  }
+} catch (error) {
+  console.error(`Error checking data directory: ${error.message}`);
+}
+
 // Endpoint handlers
 const handlers = {
   // API status endpoint
   '/api/status': (req, res) => {
     try {
+      console.log('Handling status request');
+      
       // Hämta cache-statistik
       const cacheMetrics = getCacheMetrics();
       
@@ -89,6 +117,8 @@ const handlers = {
   // API docs endpoint
   '/api/docs': (req, res) => {
     try {
+      console.log('Handling docs request');
+      
       const docs = {
         api: {
           name: pkg.name,
@@ -142,6 +172,8 @@ const handlers = {
   // Scheduler status endpoint
   '/api/scheduler': (req, res) => {
     try {
+      console.log('Handling scheduler status request');
+      
       // Importera schemaläggningsmodulen
       import('./lib/rss/scheduler.js').then(({ getSchedulerStatus }) => {
         const status = getSchedulerStatus();
@@ -175,6 +207,8 @@ const handlers = {
     }
     
     try {
+      console.log('Handling force sync request');
+      
       // Importera schemaläggningsmodulen och tvinga synkronisering
       import('./lib/rss/scheduler.js').then(({ forceSyncNow }) => {
         forceSyncNow().then(result => {
@@ -209,6 +243,8 @@ const handlers = {
   // Events endpoint - hämta händelser
   '/api/events': (req, res) => {
     try {
+      console.log('Handling events request');
+      
       const parsedUrl = parse(req.url, true);
       const query = parsedUrl.query;
       
@@ -217,10 +253,13 @@ const handlers = {
       const offset = parseInt(query.offset, 10) || 0;
       const location = query.location || null;
       
+      console.log(`Events query - limit: ${limit}, offset: ${offset}, location: ${location}`);
+      
       // Hämta databas
       let db;
       try {
         db = getDatabase();
+        console.log('Database connection established');
       } catch (err) {
         console.error('Databasfel:', err);
         sendJsonResponse(res, 500, {
@@ -244,8 +283,11 @@ const handlers = {
       sql += ' ORDER BY timestamp DESC LIMIT ? OFFSET ?';
       params.push(limit, offset);
       
+      console.log(`Executing SQL: ${sql} with params: ${params.join(', ')}`);
+      
       // Kör frågan
       const events = db.prepare(sql).all(...params);
+      console.log(`Found ${events.length} events`);
       
       // Räkna totala antalet matchande händelser
       let countSql = 'SELECT COUNT(*) as total FROM events WHERE 1=1';
@@ -350,7 +392,7 @@ const server = createServer((req, res) => {
     pathname = '/' + pathname;
   }
 
-  console.log(`${req.method} ${pathname} (original: ${parsedUrl.pathname})`);
+  console.log(`${req.method} ${pathname} (original: ${parsedUrl.pathname}) from ${req.socket.remoteAddress}`);
 
   // Matcha endpoint eller skicka 404
   try {
@@ -367,6 +409,7 @@ const server = createServer((req, res) => {
         handlerNoSlash(req, res, parsedUrl.query);
       } else {
         // Skicka 404 Not Found
+        console.log(`No handler found for ${pathname}`);
         res.statusCode = 404;
         sendJsonResponse(res, 404, {
           error: 'Not Found',
