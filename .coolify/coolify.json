@@ -7,12 +7,14 @@
     "type": "dockerfile",
     "dockerfilePath": "Dockerfile"
   },
-  "startCommand": "node api/simple-server.js",
+  "startCommand": null,
   "defaultDomain": true,
   "envs": {
     "NODE_ENV": "production",
-    "PORT": "80",
-    "API_PORT": "80",
+    "PORT": "8888",
     "HOSTNAME": "0.0.0.0"
-  }
+  },
+  "buildPack": "dockerfile",
+  "dockerfilePath": "Dockerfile",
+  "buildCommand": null
 } 

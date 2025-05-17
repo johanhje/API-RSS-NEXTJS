@@ -1017,3 +1017,32 @@ No items found in RSS feed
 Fetched 0 events from RSS feed
 Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
 Scheduled sync completed in 2ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+Fetching RSS feed from: https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/
+Successfully fetched 200 items from RSS feed
+Cache SET: rss:https://polisen.se/aktuellt/rss/hela-landet/handelser-i-hela-landet/ (expires in 900s), cache size: 271
+Converting 200 RSS items to events...
+Cache SET: geocoding:normalized:trafikolycka, örebro (expires in 7776000s), cache size: 272
+[Geocoder] Geocoding "Trafikolycka, Örebro" → "örebro"
+[Geocoder] Found "örebro" in location index
+Cache SET: geocoding:trafikolycka, örebro (expires in 2592000s), cache size: 273
+[Geocoder] Geocoding "Trafikbrott, Överkalix" → "trafikbrott, överkalix"
+[Geocoder] Found "trafikbrott, överkalix" in location index
+Cache SET: geocoding:trafikbrott, överkalix (expires in 2592000s), cache size: 274
+Successfully converted 200 items to events
+Fetched 200 events from RSS feed
+Sync complete: 2 inserted, 0 updated, 198 unchanged (0.26s)
+Scheduled sync completed in 260ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 2ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 1ms
