@@ -16,6 +16,9 @@ COPY . .
 # Create data directory
 RUN mkdir -p /app/api/data
 
+# Run health check
+RUN node api/health.js
+
 # Expose port
 EXPOSE 8888
 
