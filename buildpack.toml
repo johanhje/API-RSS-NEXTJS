@@ -1,0 +1,20 @@
+[buildpack]
+name = "API-RSS-NEXTJS"
+version = "1.0.0"
+
+[publish.Ignore]
+files = [
+  ".env",
+  ".git",
+  ".github",
+  ".gitignore",
+  "node_modules",
+  "polisapi",
+  "polisapi.zip"
+]
+
+[build]
+command = "cd api && npm install && npm run build"
+
+[start]
+command = "cd api && npm start" 

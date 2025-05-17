@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: api-rss-nextjs
+    runtime: node
+    rootDir: api
+    buildCommand: npm install && npm run build
+    startCommand: node simple-server.js
+    healthCheckPath: /api/status
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: API_PORT
+        value: 8888
+    autoDeploy: true 
