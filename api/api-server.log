@@ -1188,3 +1188,9 @@ No items found in RSS feed
 Fetched 0 events from RSS feed
 Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
 Scheduled sync completed in 1ms
+Running scheduled RSS sync...
+Starting RSS feed synchronization...
+No items found in RSS feed
+Fetched 0 events from RSS feed
+Sync complete: 0 inserted, 0 updated, 0 unchanged (0.00s)
+Scheduled sync completed in 0ms
