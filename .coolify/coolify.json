@@ -7,11 +7,6 @@
     "type": "dockerfile",
     "dockerfilePath": ".coolify/Dockerfile"
   },
-  "startCommand": null,
-  "healthCheck": {
-    "port": 8888,
-    "path": "/api/status"
-  },
   "defaultDomain": true,
   "envs": {
     "NODE_ENV": "production",

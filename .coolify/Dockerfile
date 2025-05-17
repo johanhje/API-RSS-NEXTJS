@@ -1,8 +1,5 @@
 FROM node:20-alpine
 
-# Basic tools only
-RUN apk add --no-cache python3 make g++ sqlite curl
-
 # Set working directory
 WORKDIR /app
 
@@ -16,13 +13,7 @@ COPY . .
 # Create data directory
 RUN mkdir -p /app/api/data
 
-# Run health check
-RUN node api/health.js
-
-# Test port accessibility
-RUN echo "Testing server will use port: $PORT (env var) or 8888 (default)"
-
-# Expose port to the host
+# Expose port
 EXPOSE 8888
 
 # Set environment variables
