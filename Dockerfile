@@ -1,34 +1,28 @@
 FROM node:20-alpine
 
-# Installera nödvändiga verktyg
-RUN apk add --no-cache python3 make g++ sqlite nginx supervisor curl
+# Basic tools only
+RUN apk add --no-cache python3 make g++ sqlite
 
-# Förbered arbetsmappen
+# Set working directory
 WORKDIR /app
 
-# Kopiera paketfiler
+# Copy package files and install dependencies
 COPY api/package*.json ./api/
-
-# Installera beroenden
 RUN cd api && npm install
 
-# Kopiera alla källfiler
+# Copy source files
 COPY . .
 
-# Kopiera nginx configuration
-COPY nginx.conf /etc/nginx/http.d/default.conf
-
-# Skapa supervisord konfiguration
-RUN echo '[supervisord]\nnodaemon=true\n\n[program:nginx]\ncommand=nginx -g "daemon off;"\n\n[program:node]\ncommand=node /app/api/simple-server.js\nenvironment=PORT=8888,HOSTNAME=0.0.0.0,NODE_ENV=production\n\n[program:checker]\ncommand=node /app/api/check-service.js\nenvironment=NODE_ENV=production' > /etc/supervisord.conf
-
-# Bygg applikationen
-RUN cd api && npm run build || echo "Byggfel, men fortsätter"
-
-# Skapa datakatalog
+# Create data directory
 RUN mkdir -p /app/api/data
 
-# Exponera port
-EXPOSE 80
+# Expose port
+EXPOSE 8888
 
-# Startkommando
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"] 
+# Set environment variables
+ENV NODE_ENV=production
+ENV PORT=8888
+ENV HOSTNAME=0.0.0.0
+
+# Start command - use simple-server directly
+CMD ["node", "api/simple-server.js"] 

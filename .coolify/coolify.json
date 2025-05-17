@@ -2,10 +2,10 @@
   "version": "1.0.0",
   "serviceType": "application",
   "buildWith": "dockerfile",
-  "port": 80,
+  "port": 8888,
   "build": {
     "type": "dockerfile",
-    "dockerfilePath": "Dockerfile"
+    "dockerfilePath": ".coolify/Dockerfile"
   },
   "startCommand": null,
   "defaultDomain": true,
